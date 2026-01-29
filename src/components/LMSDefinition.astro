@@ -1,0 +1,373 @@
+---
+// LMS Definition Component - Explicación detallada de qué es un LMS
+---
+
+<section class="lms-definition">
+	<div class="section-header">
+		<span class="section-label">Definición</span>
+		<h2>Entendiendo el concepto de <span class="highlight">LMS</span></h2>
+		<p class="section-subtitle">
+			Un LMS es mucho más que una simple plataforma de cursos online
+		</p>
+	</div>
+
+	<div class="definition-grid">
+		<div class="definition-card main-card">
+			<div class="card-icon-wrapper">
+				<div class="card-icon">🎓</div>
+			</div>
+			<h3>Definición Formal</h3>
+			<p>
+				Un <strong>Learning Management System (LMS)</strong> o Sistema de Gestión del Aprendizaje 
+				es una aplicación de software diseñada para la administración, documentación, seguimiento, 
+				presentación de informes y entrega de cursos educativos, programas de capacitación o 
+				programas de aprendizaje y desarrollo.
+			</p>
+			<div class="card-tags">
+				<span class="tag">E-Learning</span>
+				<span class="tag">Formación</span>
+				<span class="tag">Digital</span>
+			</div>
+		</div>
+
+		<div class="definition-card">
+			<div class="card-icon-wrapper small">
+				<div class="card-icon">🎯</div>
+			</div>
+			<h3>Objetivo Principal</h3>
+			<p>
+				Centralizar y automatizar los aspectos administrativos de la formación, 
+				permitiendo a las organizaciones gestionar usuarios, contenidos, inscripciones 
+				y reportes desde un único lugar.
+			</p>
+		</div>
+
+		<div class="definition-card">
+			<div class="card-icon-wrapper small">
+				<div class="card-icon">🌐</div>
+			</div>
+			<h3>Accesibilidad</h3>
+			<p>
+				Los LMS modernos son accesibles desde cualquier dispositivo con conexión a internet, 
+				permitiendo el aprendizaje en cualquier momento y lugar, rompiendo barreras geográficas.
+			</p>
+		</div>
+
+		<div class="definition-card">
+			<div class="card-icon-wrapper small">
+				<div class="card-icon">📈</div>
+			</div>
+			<h3>Seguimiento</h3>
+			<p>
+				Proporcionan herramientas de análisis y reportes detallados sobre el progreso 
+				de los estudiantes, permitiendo identificar áreas de mejora y medir el ROI de la formación.
+			</p>
+		</div>
+
+		<div class="definition-card">
+			<div class="card-icon-wrapper small">
+				<div class="card-icon">🔄</div>
+			</div>
+			<h3>Escalabilidad</h3>
+			<p>
+				Pueden gestionar desde pequeños grupos hasta miles de usuarios simultáneamente, 
+				adaptándose al crecimiento de la organización sin perder rendimiento.
+			</p>
+		</div>
+	</div>
+
+	<div class="components-section">
+		<h3 class="components-title">Componentes Esenciales de un LMS</h3>
+		<div class="components-grid">
+			<div class="component-item">
+				<div class="component-number">01</div>
+				<div class="component-content">
+					<h4>Gestión de Contenidos</h4>
+					<p>Creación, organización y distribución de materiales educativos en múltiples formatos (vídeos, documentos, SCORM, etc.)</p>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-number">02</div>
+				<div class="component-content">
+					<h4>Gestión de Usuarios</h4>
+					<p>Administración de roles, permisos, grupos y matrículas de estudiantes, instructores y administradores.</p>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-number">03</div>
+				<div class="component-content">
+					<h4>Evaluación y Certificación</h4>
+					<p>Herramientas para crear exámenes, cuestionarios, tareas y emitir certificados de finalización.</p>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-number">04</div>
+				<div class="component-content">
+					<h4>Comunicación</h4>
+					<p>Foros, mensajería interna, notificaciones y herramientas de colaboración entre participantes.</p>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-number">05</div>
+				<div class="component-content">
+					<h4>Reportes y Analíticas</h4>
+					<p>Dashboards y métricas detalladas sobre el rendimiento, engagement y progreso del aprendizaje.</p>
+				</div>
+			</div>
+			<div class="component-item">
+				<div class="component-number">06</div>
+				<div class="component-content">
+					<h4>Integraciones</h4>
+					<p>Conexión con otras herramientas empresariales como CRM, RRHH, sistemas de videoconferencia, etc.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.lms-definition {
+		padding: 6rem 2rem;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-label {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.75rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		margin: 0 0 1rem 0;
+	}
+
+	.highlight {
+		position: relative;
+		color: var(--primary-color);
+	}
+
+	.highlight::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 8px;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		opacity: 0.3;
+		border-radius: 4px;
+	}
+
+	.section-subtitle {
+		font-size: 1.2rem;
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.definition-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-bottom: 5rem;
+	}
+
+	.definition-card {
+		background: var(--surface-color);
+		border-radius: 20px;
+		padding: 2rem;
+		border: 1px solid var(--border-color);
+		transition: all 0.3s ease;
+	}
+
+	.definition-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--primary-color);
+	}
+
+	.definition-card.main-card {
+		grid-column: span 2;
+		grid-row: span 2;
+		padding: 3rem;
+		background: linear-gradient(135deg, var(--surface-color), rgba(99, 102, 241, 0.05));
+	}
+
+	.card-icon-wrapper {
+		width: 80px;
+		height: 80px;
+		border-radius: 20px;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+	}
+
+	.card-icon-wrapper.small {
+		width: 60px;
+		height: 60px;
+		border-radius: 15px;
+	}
+
+	.card-icon {
+		font-size: 2.5rem;
+	}
+
+	.card-icon-wrapper.small .card-icon {
+		font-size: 1.8rem;
+	}
+
+	.definition-card h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0 0 1rem 0;
+	}
+
+	.definition-card.main-card h3 {
+		font-size: 1.75rem;
+	}
+
+	.definition-card p {
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	.definition-card.main-card p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+	}
+
+	.card-tags {
+		display: flex;
+		gap: 0.75rem;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.tag {
+		padding: 0.5rem 1rem;
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+		border: 1px solid rgba(99, 102, 241, 0.2);
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--primary-color);
+	}
+
+	.components-section {
+		background: var(--surface-color);
+		border-radius: 24px;
+		padding: 3rem;
+		border: 1px solid var(--border-color);
+	}
+
+	.components-title {
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0 0 2rem 0;
+		text-align: center;
+	}
+
+	.components-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.component-item {
+		display: flex;
+		gap: 1rem;
+		padding: 1.5rem;
+		background: var(--bg-secondary);
+		border-radius: 16px;
+		transition: all 0.3s ease;
+	}
+
+	.component-item:hover {
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+		transform: translateX(5px);
+	}
+
+	.component-number {
+		font-size: 2rem;
+		font-weight: 800;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		line-height: 1;
+	}
+
+	.component-content h4 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0 0 0.5rem 0;
+	}
+
+	.component-content p {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 1024px) {
+		.definition-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.definition-card.main-card {
+			grid-column: span 2;
+			grid-row: span 1;
+		}
+
+		.components-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.lms-definition {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.definition-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.definition-card.main-card {
+			grid-column: span 1;
+		}
+
+		.components-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.components-section {
+			padding: 2rem 1.5rem;
+		}
+	}
+</style>
