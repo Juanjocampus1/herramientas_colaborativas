@@ -1,0 +1,484 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="container">
+		<header class="hero">
+			<h1>🔒 Seguridad en WordPress</h1>
+			<p class="subtitle">Guía completa de buenas prácticas y protección para tu sitio WordPress</p>
+		</header>
+
+		<section class="intro">
+			<p>WordPress es el CMS más popular del mundo, pero esto también lo convierte en un objetivo frecuente para ataques. Mantener tu sitio seguro es esencial para proteger tus datos, los de tus usuarios y tu reputación online.</p>
+		</section>
+
+		<section class="section">
+			<h2>🛡️ Amenazas Comunes</h2>
+			<div class="grid">
+				<div class="card danger">
+					<h3>Ataques de Fuerza Bruta</h3>
+					<p>Intentos automatizados de adivinar credenciales de acceso mediante prueba y error masivo.</p>
+				</div>
+				<div class="card danger">
+					<h3>Inyección SQL</h3>
+					<p>Inserción de código malicioso en consultas SQL para acceder o manipular la base de datos.</p>
+				</div>
+				<div class="card danger">
+					<h3>XSS (Cross-Site Scripting)</h3>
+					<p>Inyección de scripts maliciosos en páginas web vistas por otros usuarios.</p>
+				</div>
+				<div class="card danger">
+					<h3>Malware y Backdoors</h3>
+					<p>Software malicioso que permite acceso no autorizado y control del sitio.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>✅ Buenas Prácticas de Seguridad</h2>
+			<div class="practices">
+				<div class="practice-item">
+					<div class="practice-number">1</div>
+					<div class="practice-content">
+						<h3>Mantén WordPress Actualizado</h3>
+						<p>Actualiza siempre a la última versión de WordPress, temas y plugins. Las actualizaciones incluyen parches de seguridad críticos.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">2</div>
+					<div class="practice-content">
+						<h3>Usa Contraseñas Robustas</h3>
+						<p>Implementa contraseñas complejas con al menos 12 caracteres, combinando mayúsculas, minúsculas, números y símbolos.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">3</div>
+					<div class="practice-content">
+						<h3>Limita Intentos de Inicio de Sesión</h3>
+						<p>Instala plugins que limiten los intentos de login para prevenir ataques de fuerza bruta.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">4</div>
+					<div class="practice-content">
+						<h3>Implementa Autenticación de Dos Factores (2FA)</h3>
+						<p>Añade una capa extra de seguridad requiriendo un segundo método de verificación al iniciar sesión.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">5</div>
+					<div class="practice-content">
+						<h3>Usa SSL/HTTPS</h3>
+						<p>Encripta la comunicación entre el servidor y los usuarios con un certificado SSL válido.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">6</div>
+					<div class="practice-content">
+						<h3>Realiza Copias de Seguridad Regulares</h3>
+						<p>Configura backups automáticos diarios o semanales de archivos y base de datos.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">7</div>
+					<div class="practice-content">
+						<h3>Cambia el Prefijo de la Base de Datos</h3>
+						<p>Modifica el prefijo por defecto "wp_" para dificultar ataques SQL injection.</p>
+					</div>
+				</div>
+
+				<div class="practice-item">
+					<div class="practice-number">8</div>
+					<div class="practice-content">
+						<h3>Desactiva la Edición de Archivos</h3>
+						<p>Deshabilita el editor de temas y plugins desde el panel de administración añadiendo <code>define('DISALLOW_FILE_EDIT', true);</code> en wp-config.php</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>🔌 Plugins de Seguridad Recomendados</h2>
+			<div class="grid">
+				<div class="card plugin">
+					<h3>Wordfence Security</h3>
+					<ul>
+						<li>Firewall de aplicación web (WAF)</li>
+						<li>Escáner de malware</li>
+						<li>Protección contra fuerza bruta</li>
+						<li>Monitoreo en tiempo real</li>
+					</ul>
+				</div>
+				<div class="card plugin">
+					<h3>Sucuri Security</h3>
+					<ul>
+						<li>Auditoría de seguridad</li>
+						<li>Monitoreo de integridad de archivos</li>
+						<li>Detección de malware</li>
+						<li>Hardening de seguridad</li>
+					</ul>
+				</div>
+				<div class="card plugin">
+					<h3>iThemes Security</h3>
+					<ul>
+						<li>Protección de fuerza bruta</li>
+						<li>Detección de cambios en archivos</li>
+						<li>Fortalecimiento de contraseñas</li>
+						<li>Autenticación de dos factores</li>
+					</ul>
+				</div>
+				<div class="card plugin">
+					<h3>All In One WP Security</h3>
+					<ul>
+						<li>Interfaz fácil de usar</li>
+						<li>Protección de login</li>
+						<li>Prevención de spam</li>
+						<li>Respaldo de .htaccess</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>⚙️ Configuración Avanzada en wp-config.php</h2>
+			<div class="code-section">
+				<pre><code>// Deshabilitar edición de archivos
+define('DISALLOW_FILE_EDIT', true);
+
+// Forzar SSL en admin
+define('FORCE_SSL_ADMIN', true);
+
+// Limitar revisiones de post
+define('WP_POST_REVISIONS', 3);
+
+// Cambiar claves de seguridad regularmente
+// Genera nuevas en: https://api.wordpress.org/secret-key/1.1/salt/
+
+// Ocultar errores de PHP en producción
+ini_set('display_errors', 'Off');
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);</code></pre>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>🔍 Monitoreo y Auditoría</h2>
+			<div class="monitoring">
+				<div class="monitor-item">
+					<h3>📊 Registros de Actividad</h3>
+					<p>Mantén un log detallado de todas las acciones administrativas, cambios en archivos y accesos al sitio.</p>
+				</div>
+				<div class="monitor-item">
+					<h3>🔔 Alertas de Seguridad</h3>
+					<p>Configura notificaciones automáticas para cambios críticos, inicios de sesión sospechosos o malware detectado.</p>
+				</div>
+				<div class="monitor-item">
+					<h3>🛠️ Análisis Regular</h3>
+					<p>Realiza escaneos de seguridad semanales para detectar vulnerabilidades, archivos modificados o código malicioso.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section highlight">
+			<h2>💡 Checklist de Seguridad WordPress</h2>
+			<div class="checklist">
+				<label><input type="checkbox" /> WordPress, temas y plugins actualizados</label>
+				<label><input type="checkbox" /> Contraseñas fuertes y únicas</label>
+				<label><input type="checkbox" /> Autenticación de dos factores activada</label>
+				<label><input type="checkbox" /> SSL/HTTPS configurado correctamente</label>
+				<label><input type="checkbox" /> Plugin de seguridad instalado y configurado</label>
+				<label><input type="checkbox" /> Copias de seguridad automáticas programadas</label>
+				<label><input type="checkbox" /> Límite de intentos de inicio de sesión</label>
+				<label><input type="checkbox" /> Prefijo de base de datos personalizado</label>
+				<label><input type="checkbox" /> Edición de archivos deshabilitada</label>
+				<label><input type="checkbox" /> Permisos de archivos correctamente configurados</label>
+				<label><input type="checkbox" /> Hosting confiable con medidas de seguridad</label>
+				<label><input type="checkbox" /> Monitoreo y alertas activos</label>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<p>🔐 <strong>Recuerda:</strong> La seguridad no es un destino, es un proceso continuo. Mantén tu sitio WordPress actualizado y monitorizado constantemente.</p>
+		</footer>
+	</main>
+</Layout>
+
+<style>
+	:global(body) {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #333;
+		line-height: 1.6;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.hero {
+		background: white;
+		border-radius: 20px;
+		padding: 3rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin: 0;
+		color: #667eea;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.subtitle {
+		font-size: 1.3rem;
+		color: #666;
+		margin: 1rem 0 0 0;
+	}
+
+	.intro {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		border-left: 5px solid #667eea;
+	}
+
+	.intro p {
+		margin: 0;
+		font-size: 1.1rem;
+		color: #555;
+	}
+
+	.section {
+		background: white;
+		border-radius: 15px;
+		padding: 2.5rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.section h2 {
+		color: #667eea;
+		font-size: 2rem;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		border-bottom: 3px solid #667eea;
+		padding-bottom: 0.5rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.card {
+		border-radius: 10px;
+		padding: 1.5rem;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+	}
+
+	.card h3 {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+		font-size: 1.3rem;
+	}
+
+	.card.danger {
+		background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+		color: white;
+	}
+
+	.card.plugin {
+		background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+		color: white;
+	}
+
+	.card ul {
+		margin: 0.5rem 0 0 0;
+		padding-left: 1.5rem;
+	}
+
+	.card li {
+		margin: 0.3rem 0;
+	}
+
+	.practices {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.practice-item {
+		display: flex;
+		gap: 1.5rem;
+		align-items: flex-start;
+		background: #f8f9fa;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border-left: 4px solid #667eea;
+		transition: background 0.3s ease;
+	}
+
+	.practice-item:hover {
+		background: #e9ecef;
+	}
+
+	.practice-number {
+		background: #667eea;
+		color: white;
+		font-size: 1.5rem;
+		font-weight: bold;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.practice-content h3 {
+		margin: 0 0 0.5rem 0;
+		color: #667eea;
+		font-size: 1.2rem;
+	}
+
+	.practice-content p {
+		margin: 0;
+		color: #555;
+	}
+
+	.practice-content code {
+		background: #e9ecef;
+		padding: 0.2rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		color: #d63384;
+	}
+
+	.code-section {
+		background: #1e1e1e;
+		border-radius: 10px;
+		padding: 1.5rem;
+		overflow-x: auto;
+	}
+
+	.code-section pre {
+		margin: 0;
+	}
+
+	.code-section code {
+		color: #d4d4d4;
+		font-family: 'Courier New', monospace;
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.monitoring {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.monitor-item {
+		background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+		color: white;
+		padding: 1.5rem;
+		border-radius: 10px;
+	}
+
+	.monitor-item h3 {
+		margin-top: 0;
+		font-size: 1.3rem;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+		border: none;
+	}
+
+	.checklist {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.checklist label {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		font-size: 1.1rem;
+		padding: 0.8rem;
+		background: white;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: background 0.3s ease;
+	}
+
+	.checklist label:hover {
+		background: #fff5eb;
+	}
+
+	.checklist input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+
+	.footer {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		text-align: center;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		border-top: 4px solid #667eea;
+	}
+
+	.footer p {
+		margin: 0;
+		font-size: 1.1rem;
+		color: #555;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 1rem;
+		}
+
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+		}
+
+		.grid {
+			grid-template-columns: 1fr;
+		}
+
+		.practice-item {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>

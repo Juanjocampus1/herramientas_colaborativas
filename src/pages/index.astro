@@ -1,13 +1,408 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-//
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import FeatureCard from '../components/FeatureCard.astro';
 ---
 
 <Layout>
-	<Welcome />
-	<h1>Welcome to Herramientas Colaborativas</h1>
+	<Navbar />
+
+	<main class="main-content">
+		<section class="hero-section">
+			<div class="hero-container">
+				<h1 class="hero-title">🚀 Herramientas Colaborativas</h1>
+				<p class="hero-subtitle">
+					Tu guía completa para las mejores prácticas en desarrollo web,
+					seguridad y herramientas colaborativas
+				</p>
+				<div class="hero-buttons">
+					<a href="#features" class="btn btn-primary">Explorar</a>
+					<a href="/seguridad-wordpress" class="btn btn-secondary">Seguridad WP</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="features" class="features-section">
+			<div class="container">
+				<h2 class="section-title">📚 Recursos Disponibles</h2>
+				<p class="section-description">
+					Descubre nuestras guías y recursos para mejorar tu productividad y seguridad
+				</p>
+
+				<div class="features-grid">
+					<FeatureCard
+						icon="🔒"
+						title="Seguridad WordPress"
+						description="Aprende las mejores prácticas para proteger tu sitio WordPress contra amenazas y vulnerabilidades."
+						link="/seguridad-wordpress"
+					/>
+
+					<FeatureCard
+						icon="🛠️"
+						title="Herramientas de Desarrollo"
+						description="Descubre las herramientas esenciales para el desarrollo web colaborativo y eficiente."
+						link="#tools"
+					/>
+
+					<FeatureCard
+						icon="📊"
+						title="Control de Versiones"
+						description="Domina Git y GitHub para trabajar en equipo de manera efectiva y profesional."
+						link="#git"
+					/>
+
+					<FeatureCard
+						icon="🎨"
+						title="Diseño Web"
+						description="Mejores prácticas de diseño UI/UX para crear experiencias de usuario excepcionales."
+						link="#design"
+					/>
+
+					<FeatureCard
+						icon="⚡"
+						title="Performance"
+						description="Optimiza el rendimiento de tus aplicaciones web para una experiencia ultrarrápida."
+						link="#performance"
+					/>
+
+					<FeatureCard
+						icon="📱"
+						title="Responsive Design"
+						description="Crea sitios web que se adapten perfectamente a cualquier dispositivo y tamaño de pantalla."
+						link="#responsive"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about-section">
+			<div class="container">
+				<div class="about-content">
+					<div class="about-text">
+						<h2>💡 Acerca de Este Proyecto</h2>
+						<p>
+							Este sitio es una colección de recursos, guías y mejores prácticas
+							para desarrolladores web que buscan mejorar sus habilidades y conocimientos
+							en herramientas colaborativas, seguridad web y desarrollo moderno.
+						</p>
+						<p>
+							Nuestro objetivo es proporcionar información clara, práctica y actualizada
+							que puedas aplicar inmediatamente en tus proyectos.
+						</p>
+					</div>
+					<div class="about-image">
+						<div class="stats-card">
+							<div class="stat">
+								<span class="stat-number">100%</span>
+								<span class="stat-label">Gratuito</span>
+							</div>
+							<div class="stat">
+								<span class="stat-number">24/7</span>
+								<span class="stat-label">Disponible</span>
+							</div>
+							<div class="stat">
+								<span class="stat-number">∞</span>
+								<span class="stat-label">Aprendizaje</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="contact-section">
+			<div class="container">
+				<h2 class="section-title">📬 Mantente Informado</h2>
+				<p class="section-description">
+					Suscríbete para recibir las últimas actualizaciones y nuevos recursos
+				</p>
+				<div class="contact-form">
+					<label for="email-subscribe" class="visually-hidden">Email</label>
+					<input 
+						id="email-subscribe" 
+						type="email" 
+						placeholder="Tu correo electrónico" 
+						class="email-input" 
+					/>
+					<button class="subscribe-btn">Suscribirse</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p>© 2026 Herramientas Colaborativas. Hecho con ❤️ y Astro</p>
+	</footer>
 </Layout>
+
+<style>
+	:global(body) {
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-content {
+		min-height: 100vh;
+	}
+
+	.hero-section {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		padding: 6rem 2rem;
+		text-align: center;
+		color: white;
+	}
+
+	.hero-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3.5rem;
+		margin: 0 0 1rem 0;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+		animation: fadeInUp 0.8s ease;
+	}
+
+	.hero-subtitle {
+		font-size: 1.3rem;
+		margin: 0 0 2rem 0;
+		line-height: 1.6;
+		opacity: 0.95;
+		animation: fadeInUp 0.8s ease 0.2s both;
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		animation: fadeInUp 0.8s ease 0.4s both;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: white;
+		color: #667eea;
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-secondary:hover {
+		background: white;
+		color: #667eea;
+		transform: translateY(-3px);
+	}
+
+	.features-section {
+		padding: 5rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		text-align: center;
+		color: #333;
+		margin: 0 0 1rem 0;
+	}
+
+	.section-description {
+		text-align: center;
+		font-size: 1.2rem;
+		color: #666;
+		margin: 0 0 3rem 0;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.about-section {
+		padding: 5rem 2rem;
+		background: white;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.about-text h2 {
+		color: #667eea;
+		font-size: 2.5rem;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.about-text p {
+		color: #555;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin: 0 0 1rem 0;
+	}
+
+	.stats-card {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		padding: 3rem;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: white;
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 1.2rem;
+		opacity: 0.9;
+	}
+
+	.contact-section {
+		padding: 5rem 2rem;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+	}
+
+	.contact-section .section-title,
+	.contact-section .section-description {
+		color: white;
+	}
+
+	.contact-form {
+		max-width: 600px;
+		margin: 0 auto;
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.email-input {
+		flex: 1;
+		min-width: 250px;
+		padding: 1rem 1.5rem;
+		border: none;
+		border-radius: 50px;
+		font-size: 1rem;
+	}
+
+	.subscribe-btn {
+		padding: 1rem 2.5rem;
+		background: white;
+		color: #667eea;
+		border: none;
+		border-radius: 50px;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.subscribe-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	}
+
+	.footer {
+		background: #2c3e50;
+		color: white;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.footer p {
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-form {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.email-input,
+		.subscribe-btn {
+			width: 100%;
+		}
+	}
+</style>
+
