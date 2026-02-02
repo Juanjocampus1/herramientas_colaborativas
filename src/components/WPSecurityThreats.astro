@@ -1,0 +1,408 @@
+---
+// WordPress Security Threats Component - Amenazas comunes
+---
+
+<section class="wp-threats">
+	<div class="section-header">
+		<span class="section-label">Amenazas</span>
+		<h2>Conoce los <span class="highlight">peligros</span> más comunes</h2>
+		<p class="section-subtitle">
+			Identificar las amenazas es el primer paso para proteger tu sitio WordPress
+		</p>
+	</div>
+
+	<div class="threats-grid">
+		<div class="threat-card danger-high">
+			<div class="threat-header">
+				<div class="threat-icon">⚠️</div>
+				<span class="threat-level">Alto Riesgo</span>
+			</div>
+			<h3>Ataques de Fuerza Bruta</h3>
+			<p>
+				Intentos automatizados masivos para adivinar credenciales de acceso mediante
+				prueba y error. Miles de combinaciones por minuto hasta encontrar la correcta.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">90K+</span>
+					<span class="stat-desc">intentos/minuto</span>
+				</div>
+				<div class="stat">
+					<span class="stat-value">70%</span>
+					<span class="stat-desc">de ataques</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="threat-card danger-critical">
+			<div class="threat-header">
+				<div class="threat-icon">💉</div>
+				<span class="threat-level">Crítico</span>
+			</div>
+			<h3>Inyección SQL</h3>
+			<p>
+				Inserción de código SQL malicioso en consultas para acceder, modificar o eliminar
+				información sensible de la base de datos sin autorización.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">25%</span>
+					<span class="stat-desc">de vulnerabilidades</span>
+				</div>
+				<div class="stat">
+					<span class="stat-value">High</span>
+					<span class="stat-desc">impacto</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="threat-card danger-high">
+			<div class="threat-header">
+				<div class="threat-icon">🔗</div>
+				<span class="threat-level">Alto Riesgo</span>
+			</div>
+			<h3>Cross-Site Scripting (XSS)</h3>
+			<p>
+				Inyección de scripts maliciosos en páginas web vistas por otros usuarios.
+				Permite robar cookies, sesiones y ejecutar acciones en nombre de las víctimas.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">40%</span>
+					<span class="stat-desc">de vulnerabilidades web</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="threat-card danger-critical">
+			<div class="threat-header">
+				<div class="threat-icon">🦠</div>
+				<span class="threat-level">Crítico</span>
+			</div>
+			<h3>Malware y Backdoors</h3>
+			<p>
+				Software malicioso que permite acceso no autorizado permanente al sitio.
+				Puede robar datos, infectar visitantes o usar recursos para ataques.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">18K+</span>
+					<span class="stat-desc">sitios infectados/día</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="threat-card danger-medium">
+			<div class="threat-header">
+				<div class="threat-icon">🎣</div>
+				<span class="threat-level">Riesgo Medio</span>
+			</div>
+			<h3>Phishing y Spam</h3>
+			<p>
+				Formularios de comentarios y contacto abusados para enviar spam o enlaces
+				de phishing. Daña reputación SEO y confianza de usuarios.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">60%</span>
+					<span class="stat-desc">de emails maliciosos</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="threat-card danger-high">
+			<div class="threat-header">
+				<div class="threat-icon">🔓</div>
+				<span class="threat-level">Alto Riesgo</span>
+			</div>
+			<h3>Vulnerabilidades de Plugins</h3>
+			<p>
+				Plugins desactualizados o mal codificados con fallos de seguridad explotables.
+				Punto de entrada común para atacantes.
+			</p>
+			<div class="threat-stats">
+				<div class="stat">
+					<span class="stat-value">50%</span>
+					<span class="stat-desc">de infecciones</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="threat-impact">
+		<h3>Consecuencias de un sitio comprometido</h3>
+		<div class="impact-grid">
+			<div class="impact-item">
+				<span class="impact-icon">💸</span>
+				<h4>Pérdidas Económicas</h4>
+				<p>Costos de recuperación, pérdida de ventas y multas por incumplimiento</p>
+			</div>
+			<div class="impact-item">
+				<span class="impact-icon">📉</span>
+				<h4>Daño Reputacional</h4>
+				<p>Pérdida de confianza de clientes y penalizaciones en motores de búsqueda</p>
+			</div>
+			<div class="impact-item">
+				<span class="impact-icon">⏱️</span>
+				<h4>Tiempo de Inactividad</h4>
+				<p>Sitio fuera de línea durante limpieza y recuperación del sistema</p>
+			</div>
+			<div class="impact-item">
+				<span class="impact-icon">🗃️</span>
+				<h4>Pérdida de Datos</h4>
+				<p>Información de clientes, contenido y configuraciones permanentemente perdidos</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.wp-threats {
+		padding: 6rem 2rem;
+		background:
+			linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+		position: relative;
+	}
+
+	.wp-threats::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background:
+			radial-gradient(circle at 10% 20%, rgba(239, 68, 68, 0.05) 0%, transparent 50%),
+			radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.section-label {
+		display: inline-block;
+		background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+		color: white;
+		padding: 0.5rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 0.875rem;
+		letter-spacing: 0.5px;
+		margin-bottom: 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #1f2937;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		color: #ef4444;
+	}
+
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: #6b7280;
+		line-height: 1.6;
+	}
+
+	.threats-grid {
+		max-width: 1200px;
+		margin: 0 auto 4rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+	}
+
+	.threat-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 20px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.threat-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+	}
+
+	.threat-card.danger-critical::before {
+		background: linear-gradient(90deg, #dc2626, #991b1b);
+	}
+
+	.threat-card.danger-high::before {
+		background: linear-gradient(90deg, #f59e0b, #d97706);
+	}
+
+	.threat-card.danger-medium::before {
+		background: linear-gradient(90deg, #3b82f6, #2563eb);
+	}
+
+	.threat-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+	}
+
+	.threat-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1.25rem;
+	}
+
+	.threat-icon {
+		font-size: 2.5rem;
+	}
+
+	.threat-level {
+		background: rgba(239, 68, 68, 0.15);
+		color: #dc2626;
+		padding: 0.5rem 1.25rem;
+		border-radius: 50px;
+		font-weight: 700;
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.8; }
+	}
+
+	.danger-critical .threat-level {
+		background: rgba(220, 38, 38, 0.15);
+		color: #991b1b;
+	}
+
+	.danger-medium .threat-level {
+		background: rgba(59, 130, 246, 0.1);
+		color: #2563eb;
+	}
+
+	.threat-card h3 {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+
+	.threat-card p {
+		color: #6b7280;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+
+	.threat-stats {
+		display: flex;
+		gap: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 2px solid #f3f4f6;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.stat-value {
+		font-size: 1.75rem;
+		font-weight: 900;
+		color: #dc2626;
+		line-height: 1;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-desc {
+		font-size: 0.8rem;
+		color: #9ca3af;
+		font-weight: 600;
+	}
+
+	.threat-impact {
+		max-width: 1200px;
+		margin: 0 auto;
+		background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+		padding: 3rem;
+		border-radius: 24px;
+		border: 2px solid #fecaca;
+	}
+
+	.threat-impact h3 {
+		text-align: center;
+		font-size: 2rem;
+		font-weight: 800;
+		color: #991b1b;
+		margin-bottom: 2.5rem;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.impact-item {
+		text-align: center;
+	}
+
+	.impact-icon {
+		font-size: 3rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.impact-item h4 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #7f1d1d;
+		margin-bottom: 0.5rem;
+	}
+
+	.impact-item p {
+		color: #991b1b;
+		line-height: 1.6;
+		font-size: 0.95rem;
+	}
+
+	@media (max-width: 768px) {
+		.wp-threats {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.threats-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.threat-impact {
+			padding: 2rem 1.5rem;
+		}
+
+		.impact-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
