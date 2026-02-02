@@ -1,0 +1,176 @@
+---
+// src/components/CMSWordpressFeatures.astro
+interface Feature {
+    title: string;
+    description: string;
+    icon: string;
+}
+
+const features: Feature[] = [
+    {
+        title: "Gestión de Contenido Intuitiva",
+        description: "Editor visual fácil de usar con bloques Gutenberg para crear contenido sin conocimientos técnicos.",
+        icon: "📝"
+    },
+    {
+        title: "Sistema de Usuarios y Roles",
+        description: "Control granular de permisos con roles predefinidos: administrador, editor, autor, colaborador y suscriptor.",
+        icon: "👥"
+    },
+    {
+        title: "SEO Optimizado",
+        description: "URLs amigables, meta tags personalizables y estructura optimizada para motores de búsqueda.",
+        icon: "🔍"
+    },
+    {
+        title: "Responsive y Mobile-First",
+        description: "Temas adaptativos que garantizan una experiencia óptima en todos los dispositivos.",
+        icon: "📱"
+    },
+    {
+        title: "Gestión de Medios Avanzada",
+        description: "Biblioteca multimedia robusta con edición de imágenes, galerías y organización por categorías.",
+        icon: "🖼️"
+    },
+    {
+        title: "Taxonomías Personalizables",
+        description: "Categorías y etiquetas flexibles para organizar el contenido según tus necesidades.",
+        icon: "🏷️"
+    },
+    {
+        title: "Multiidioma Nativo",
+        description: "Soporte completo para sitios web multiidioma con plugins especializados.",
+        icon: "🌍"
+    },
+    {
+        title: "Seguridad Robusta",
+        description: "Actualizaciones automáticas, copias de seguridad y plugins de seguridad avanzados.",
+        icon: "🔐"
+    }
+];
+---
+
+<section class="section">
+    <div class="section-header">
+        <span class="section-label">WordPress CMS</span>
+        <h2>Características Principales</h2>
+        <p class="section-subtitle">
+            Descubre por qué WordPress es la plataforma CMS más utilizada en el mundo,
+            con funcionalidades profesionales que facilitan la gestión de contenido.
+        </p>
+    </div>
+
+    <div class="features-grid">
+        {features.map((feature) => (
+                <div class="feature-card">
+                    <div class="feature-icon">{feature.icon}</div>
+                    <h3>{feature.title}</h3>
+                    <p>{feature.description}</p>
+                </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-label {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--primary-color);
+    }
+
+    .section-header h2 {
+        font-size: 2.4rem;
+        margin: 0.75rem 0 1rem;
+    }
+
+    .section-subtitle {
+        max-width: 680px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary-color);
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+        margin: 0 0 0.6rem;
+        line-height: 1.3;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+
+    @media (max-width: 1024px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section {
+            padding: 3rem 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .feature-card {
+            padding: 1.25rem;
+        }
+    }
+</style>
