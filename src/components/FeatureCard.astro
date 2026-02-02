@@ -1,0 +1,140 @@
+---
+interface Props {
+	icon: string;
+	title: string;
+	description: string;
+	link: string;
+}
+
+const { icon, title, description, link } = Astro.props;
+---
+
+<div class="feature-card">
+	<div class="card-icon-wrapper">
+		<div class="card-icon">{icon}</div>
+	</div>
+	<h3>{title}</h3>
+	<p>{description}</p>
+	<a href={link} class="card-link">
+		Explorar <span class="arrow">→</span>
+	</a>
+</div>
+
+<style>
+	.feature-card {
+		background: var(--surface-color);
+		border-radius: var(--radius-xl);
+		padding: 2rem;
+		border: 1px solid var(--border-color);
+		transition: all var(--transition-base);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.feature-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform var(--transition-base);
+	}
+
+	.feature-card:hover {
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--primary-light);
+	}
+
+	.feature-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.card-icon-wrapper {
+		width: 60px;
+		height: 60px;
+		border-radius: var(--radius-lg);
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.25rem;
+		transition: all var(--transition-base);
+	}
+
+	.feature-card:hover .card-icon-wrapper {
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+	}
+
+	.card-icon {
+		font-size: 1.75rem;
+		transition: all var(--transition-base);
+	}
+
+	.feature-card:hover .card-icon {
+		transform: scale(1.1);
+	}
+
+	h3 {
+		color: var(--text-primary);
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin: 0 0 0.75rem 0;
+		letter-spacing: -0.3px;
+	}
+
+	p {
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin: 0;
+		flex-grow: 1;
+		font-size: 0.95rem;
+	}
+
+	.card-link {
+		color: var(--primary-color);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 1.5rem;
+		padding: 0.6rem 0;
+		transition: all var(--transition-base);
+		position: relative;
+	}
+
+	.card-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0.4rem;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+		transition: width var(--transition-base);
+	}
+
+	.card-link:hover::after {
+		width: calc(100% - 1.5rem);
+	}
+
+	.arrow {
+		transition: transform var(--transition-base);
+		display: inline-block;
+	}
+
+	.card-link:hover .arrow {
+		transform: translateX(4px);
+	}
+</style>

@@ -1,0 +1,511 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CMSHero from '../components/CMSHero.astro';
+import CMSDefinition from '../components/CMSDefinition.astro';
+import CMSFeatures from '../components/CMSFeatures.astro';
+---
+
+<Layout>
+	<main class="cms-page">
+		<CMSHero />
+		<CMSDefinition />
+		<CMSFeatures />
+
+		<section class="cms-examples">
+			<div class="section-header">
+				<span class="section-label">Ejemplos</span>
+				<h2>Plataformas <span class="highlight">CMS</span> Populares</h2>
+				<p class="section-subtitle">
+					Conoce las herramientas más utilizadas para la gestión de contenido web
+				</p>
+			</div>
+
+			<div class="platforms-grid">
+				<div class="platform-card featured">
+					<div class="featured-badge">Más Popular</div>
+					<div class="platform-logo">
+						<span class="logo-emoji">📘</span>
+					</div>
+					<h3>WordPress</h3>
+					<p class="platform-type">Open Source</p>
+					<p class="platform-desc">
+						El CMS más popular del mundo, utilizado por el 43% de todos los sitios web. 
+						Flexible, extensible y con una comunidad inmensa.
+					</p>
+					<ul class="platform-features">
+						<li>+60,000 plugins gratuitos</li>
+						<li>Ideal para blogs y e-commerce</li>
+						<li>Fácil de usar y personalizar</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">🎨</span>
+					</div>
+					<h3>Drupal</h3>
+					<p class="platform-type">Open Source</p>
+					<p class="platform-desc">
+						CMS robusto y seguro, perfecto para sitios web complejos y de gran escala. 
+						Utilizado por gobiernos y grandes empresas.
+					</p>
+					<ul class="platform-features">
+						<li>Altamente escalable</li>
+						<li>Seguridad de nivel empresarial</li>
+						<li>Flexible y personalizable</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">🌟</span>
+					</div>
+					<h3>Joomla</h3>
+					<p class="platform-type">Open Source</p>
+					<p class="platform-desc">
+						CMS equilibrado entre facilidad de uso y potencia. Excelente para 
+						sitios web corporativos y portales comunitarios.
+					</p>
+					<ul class="platform-features">
+						<li>Interfaz intuitiva</li>
+						<li>Multilingüe nativo</li>
+						<li>Buena gestión de usuarios</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">🛍️</span>
+					</div>
+					<h3>Shopify</h3>
+					<p class="platform-type">Comercial / SaaS</p>
+					<p class="platform-desc">
+						Plataforma de e-commerce todo-en-uno. Perfecta para crear tiendas 
+						online sin conocimientos técnicos.
+					</p>
+					<ul class="platform-features">
+						<li>Hosting y seguridad incluidos</li>
+						<li>Procesamiento de pagos integrado</li>
+						<li>Soporte 24/7</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">💎</span>
+					</div>
+					<h3>Wix</h3>
+					<p class="platform-type">Comercial / SaaS</p>
+					<p class="platform-desc">
+						Constructor visual drag-and-drop. Ideal para principiantes que 
+						quieren crear sitios web profesionales rápidamente.
+					</p>
+					<ul class="platform-features">
+						<li>Editor visual intuitivo</li>
+						<li>Plantillas profesionales</li>
+						<li>Hosting incluido</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">📱</span>
+					</div>
+					<h3>Squarespace</h3>
+					<p class="platform-type">Comercial / SaaS</p>
+					<p class="platform-desc">
+						Plataforma elegante y moderna, perfecta para portfolios, blogs 
+						y pequeños negocios que buscan diseño premium.
+					</p>
+					<ul class="platform-features">
+						<li>Diseños elegantes</li>
+						<li>Todo integrado</li>
+						<li>Excelente para creativos</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">⚡</span>
+					</div>
+					<h3>Contentful</h3>
+					<p class="platform-type">Headless CMS / SaaS</p>
+					<p class="platform-desc">
+						Headless CMS que entrega contenido vía API. Perfecto para aplicaciones 
+						modernas, móviles y múltiples canales.
+					</p>
+					<ul class="platform-features">
+						<li>API-first</li>
+						<li>Muy flexible</li>
+						<li>Perfecto para apps modernas</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">🎯</span>
+					</div>
+					<h3>Strapi</h3>
+					<p class="platform-type">Headless CMS / Open Source</p>
+					<p class="platform-desc">
+						Headless CMS de código abierto con enfoque en desarrolladores. 
+						Totalmente personalizable y extensible.
+					</p>
+					<ul class="platform-features">
+						<li>100% personalizable</li>
+						<li>Self-hosted o cloud</li>
+						<li>REST y GraphQL</li>
+					</ul>
+				</div>
+
+				<div class="platform-card">
+					<div class="platform-logo">
+						<span class="logo-emoji">🚀</span>
+					</div>
+					<h3>Ghost</h3>
+					<p class="platform-type">Open Source</p>
+					<p class="platform-desc">
+						CMS moderno enfocado en publicaciones y newsletters. Perfecto para 
+						creadores de contenido profesionales.
+					</p>
+					<ul class="platform-features">
+						<li>Enfocado en blogging</li>
+						<li>Editor Markdown</li>
+						<li>Newsletters integrados</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="cms-resources">
+			<div class="resources-content">
+				<h2>Recursos y Aprendizaje</h2>
+				<p class="resources-intro">
+					¿Listo para empezar con tu primer CMS? Aquí tienes algunos recursos útiles para comenzar
+				</p>
+				<div class="resources-grid">
+					<div class="resource-card">
+						<span class="resource-icon">📚</span>
+						<h4>Documentación Oficial</h4>
+						<p>Consulta las guías oficiales de cada CMS para aprender las mejores prácticas</p>
+					</div>
+					<div class="resource-card">
+						<span class="resource-icon">🎓</span>
+						<h4>Cursos Online</h4>
+						<p>Plataformas como Udemy, Coursera y LinkedIn Learning ofrecen cursos completos</p>
+					</div>
+					<div class="resource-card">
+						<span class="resource-icon">💬</span>
+						<h4>Comunidades</h4>
+						<p>Únete a foros, grupos de Facebook y comunidades de Discord para obtener ayuda</p>
+					</div>
+					<div class="resource-card">
+						<span class="resource-icon">🎥</span>
+						<h4>Video Tutoriales</h4>
+						<p>YouTube está lleno de tutoriales gratuitos paso a paso en español</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cms-footer-cta">
+			<div class="cta-content">
+				<h2>¿Listo para crear tu sitio web?</h2>
+				<p>Elige el CMS que mejor se adapte a tus necesidades y comienza a construir tu presencia online hoy mismo</p>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.cms-page {
+		min-height: 100vh;
+	}
+
+	/* CMS Examples Section */
+	.cms-examples {
+		padding: 6rem 2rem;
+		background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.section-label {
+		display: inline-block;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 0.5rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 0.875rem;
+		letter-spacing: 0.5px;
+		margin-bottom: 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		color: #667eea;
+	}
+
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: var(--text-light);
+		line-height: 1.6;
+	}
+
+	.platforms-grid {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+	}
+
+	.platform-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 20px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		position: relative;
+	}
+
+	.platform-card:hover {
+		transform: translateY(-8px);
+		border-color: #667eea;
+		box-shadow: 0 15px 50px rgba(102, 126, 234, 0.2);
+	}
+
+	.platform-card.featured {
+		border-color: #667eea;
+		background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+	}
+
+	.featured-badge {
+		position: absolute;
+		top: -12px;
+		right: 20px;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 0.5rem 1.25rem;
+		border-radius: 50px;
+		font-weight: 700;
+		font-size: 0.75rem;
+		box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+	}
+
+	.platform-logo {
+		width: 80px;
+		height: 80px;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.logo-emoji {
+		font-size: 2.5rem;
+	}
+
+	.platform-card h3 {
+		font-size: 1.75rem;
+		font-weight: 800;
+		color: var(--text-dark);
+		margin-bottom: 0.5rem;
+	}
+
+	.platform-type {
+		color: #667eea;
+		font-weight: 600;
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+
+	.platform-desc {
+		color: var(--text-light);
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+
+	.platform-features {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.platform-features li {
+		padding: 0.75rem 0;
+		color: var(--text-light);
+		border-bottom: 1px solid #f3f4f6;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.platform-features li:last-child {
+		border-bottom: none;
+	}
+
+	.platform-features li::before {
+		content: '✓';
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		background: #d1fae5;
+		color: #065f46;
+		border-radius: 50%;
+		font-weight: 700;
+		font-size: 0.75rem;
+		flex-shrink: 0;
+	}
+
+	/* Resources Section */
+	.cms-resources {
+		padding: 6rem 2rem;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+	}
+
+	.resources-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.resources-content h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+
+	.resources-intro {
+		font-size: 1.125rem;
+		margin-bottom: 3rem;
+		opacity: 0.95;
+	}
+
+	.resources-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.resource-card {
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(10px);
+		padding: 2rem;
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.resource-card:hover {
+		background: rgba(255, 255, 255, 0.25);
+		transform: translateY(-5px);
+	}
+
+	.resource-icon {
+		font-size: 3rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.resource-card h4 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin-bottom: 0.75rem;
+	}
+
+	.resource-card p {
+		font-size: 0.95rem;
+		opacity: 0.9;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Footer CTA */
+	.cms-footer-cta {
+		padding: 6rem 2rem;
+		background: white;
+	}
+
+	.cta-content {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+	}
+
+	.cta-content p {
+		font-size: 1.125rem;
+		color: var(--text-light);
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	.author-signature {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		font-size: 1rem;
+		box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+	}
+
+	.signature-icon {
+		font-size: 1.5rem;
+	}
+
+	.signature-text strong {
+		font-weight: 800;
+	}
+
+	@media (max-width: 768px) {
+		.cms-examples,
+		.cms-resources,
+		.cms-footer-cta {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header h2,
+		.resources-content h2,
+		.cta-content h2 {
+			font-size: 2rem;
+		}
+
+		.platforms-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.resources-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
