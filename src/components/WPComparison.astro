@@ -1,0 +1,90 @@
+---
+---
+
+<section class="wp-comparison">
+  <h3 class="comparison-title">WordPress LMS vs CMS Tradicional</h3>
+  <div class="comparison-grid">
+    <div class="comparison-card wp-lms">
+      <div class="comparison-header">
+        <span class="comparison-icon">⚡</span>
+        <h4>WordPress LMS</h4>
+      </div>
+      <ul class="comparison-list">
+        <li class="positive"><span class="list-icon">✓</span> Gestión avanzada de cursos</li>
+        <li class="positive"><span class="list-icon">✓</span> Plugins LMS especializados</li>
+        <li class="positive"><span class="list-icon">✓</span> Gamificación y certificados</li>
+        <li class="positive"><span class="list-icon">✓</span> Flexible y escalable</li>
+        <li class="positive"><span class="list-icon">✓</span> Comunidad activa y soporte</li>
+      </ul>
+      <div class="comparison-badge">Recomendado</div>
+    </div>
+
+    <div class="comparison-card traditional-cms">
+      <div class="comparison-header">
+        <span class="comparison-icon">⚙️</span>
+        <h4>CMS Tradicional</h4>
+      </div>
+      <ul class="comparison-list">
+        <li class="negative"><span class="list-icon">✗</span> Funcionalidades limitadas para educación</li>
+        <li class="negative"><span class="list-icon">✗</span> No incluye herramientas de gamificación</li>
+        <li class="negative"><span class="list-icon">✗</span> Escalabilidad limitada</li>
+        <li class="negative"><span class="list-icon">✗</span> Dependencia de desarrolladores para extensiones</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+.wp-comparison { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+.comparison-title { text-align: center; font-size: 2rem; font-weight: 800; margin-bottom: 3rem; }
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.comparison-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.wp-lms { border: 3px solid #667eea; }
+.traditional-cms { border: 2px solid transparent; }
+
+.comparison-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.comparison-icon { font-size: 2rem; }
+.comparison-header h4 { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin: 0; }
+
+.comparison-list { list-style: none; padding: 0; margin: 0; }
+.comparison-list li { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; }
+.comparison-list li:last-child { border-bottom: none; }
+
+.list-icon { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.positive .list-icon { background: #d1fae5; color: #065f46; }
+.negative .list-icon { background: #fee2e2; color: #991b1b; }
+
+.comparison-badge {
+  position: absolute;
+  top: -15px; right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+}
+
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+}
+</style>
