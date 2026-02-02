@@ -1,0 +1,473 @@
+---
+// WordPress Security Hero Component - Sección introductoria elegante
+---
+
+<section class="wp-security-hero">
+	<div class="hero-content">
+		<div class="hero-badge">
+			<span class="badge-icon">🔒</span>
+			<span class="badge-text">WordPress Security</span>
+		</div>
+		<h1 class="hero-title">Seguridad en <span class="gradient-text">WordPress</span></h1>
+		<p class="hero-description">
+			Protege tu sitio WordPress con las mejores prácticas de seguridad. Aprende a defender tu
+			contenido, datos de usuarios y reputación online contra amenazas comunes y ataques maliciosos.
+		</p>
+		<div class="hero-stats">
+			<div class="stat-item">
+				<span class="stat-number">90K+</span>
+				<span class="stat-label">ataques por minuto</span>
+			</div>
+			<div class="stat-divider"></div>
+			<div class="stat-item">
+				<span class="stat-number">43%</span>
+				<span class="stat-label">de la web usa WP</span>
+			</div>
+			<div class="stat-divider"></div>
+			<div class="stat-item">
+				<span class="stat-number">24/7</span>
+				<span class="stat-label">protección necesaria</span>
+			</div>
+		</div>
+	</div>
+	<div class="hero-visual">
+		<div class="visual-card">
+			<div class="card-header">
+				<div class="card-dots">
+					<span></span><span></span><span></span>
+				</div>
+				<span class="card-title">Estado de Seguridad</span>
+			</div>
+			<div class="card-content">
+				<div class="security-status">
+					<div class="status-icon">🛡️</div>
+					<div class="status-text">
+						<h3>Sistema Protegido</h3>
+						<p>Todas las defensas activas</p>
+					</div>
+				</div>
+				<div class="security-metrics">
+					<div class="metric-item">
+						<span class="metric-icon">✓</span>
+						<span class="metric-label">Firewall Activo</span>
+					</div>
+					<div class="metric-item">
+						<span class="metric-icon">✓</span>
+						<span class="metric-label">SSL Configurado</span>
+					</div>
+					<div class="metric-item">
+						<span class="metric-icon">✓</span>
+						<span class="metric-label">Backups Diarios</span>
+					</div>
+					<div class="metric-item">
+						<span class="metric-icon">✓</span>
+						<span class="metric-label">2FA Habilitado</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="threat-counter">
+					<span class="counter-label">Amenazas bloqueadas hoy:</span>
+					<span class="counter-value">247</span>
+				</div>
+			</div>
+		</div>
+		<div class="floating-elements">
+			<div class="floating-badge badge-1">🔐 Cifrado SSL</div>
+			<div class="floating-badge badge-2">⚡ Actualizaciones</div>
+			<div class="floating-badge badge-3">🛡️ Firewall</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.wp-security-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		min-height: 90vh;
+		display: flex;
+		align-items: center;
+		padding: 4rem 2rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.wp-security-hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background:
+			radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.hero-content {
+		flex: 1;
+		max-width: 600px;
+		color: white;
+		z-index: 1;
+		animation: fadeInLeft 1s ease-out;
+	}
+
+	.hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(10px);
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		margin-bottom: 2rem;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		animation: slideDown 1s ease-out;
+	}
+
+	.badge-icon {
+		font-size: 1.5rem;
+	}
+
+	.badge-text {
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		font-size: 0.9rem;
+	}
+
+	.hero-title {
+		font-size: 4rem;
+		font-weight: 900;
+		line-height: 1.1;
+		margin-bottom: 1.5rem;
+		letter-spacing: -1px;
+	}
+
+	.gradient-text {
+		background: linear-gradient(45deg, #ffd89b, #19547b);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-description {
+		font-size: 1.25rem;
+		line-height: 1.8;
+		margin-bottom: 3rem;
+		opacity: 0.95;
+	}
+
+	.hero-stats {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.stat-item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 900;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+		opacity: 0.9;
+	}
+
+	.stat-divider {
+		width: 2px;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	.hero-visual {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		animation: fadeInRight 1s ease-out;
+	}
+
+	.visual-card {
+		background: white;
+		border-radius: 24px;
+		padding: 2rem;
+		box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
+		max-width: 450px;
+		width: 100%;
+	}
+
+	.card-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 2px solid #f3f4f6;
+	}
+
+	.card-dots {
+		display: flex;
+		gap: 0.4rem;
+	}
+
+	.card-dots span {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #e5e7eb;
+	}
+
+	.card-dots span:nth-child(1) { background: #ef4444; }
+	.card-dots span:nth-child(2) { background: #f59e0b; }
+	.card-dots span:nth-child(3) { background: #10b981; }
+
+	.card-title {
+		font-weight: 700;
+		color: #1f2937;
+		flex: 1;
+	}
+
+	.card-content {
+		margin-bottom: 1.5rem;
+	}
+
+	.security-status {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.5rem;
+		background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
+		border-radius: 16px;
+		margin-bottom: 1.5rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.security-status::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+		animation: shimmer 3s infinite;
+	}
+
+	@keyframes shimmer {
+		0% { left: -100%; }
+		100% { left: 100%; }
+	}
+
+	.status-icon {
+		font-size: 3rem;
+	}
+
+	.status-text h3 {
+		margin: 0 0 0.25rem 0;
+		font-size: 1.25rem;
+		color: #065f46;
+	}
+
+	.status-text p {
+		margin: 0;
+		color: #047857;
+		font-size: 0.9rem;
+	}
+
+	.security-metrics {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.metric-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.75rem;
+		background: #f9fafb;
+		border-radius: 10px;
+	}
+
+	.metric-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		background: #10b981;
+		color: white;
+		border-radius: 50%;
+		font-weight: 900;
+		font-size: 0.75rem;
+	}
+
+	.metric-label {
+		color: #374151;
+		font-weight: 600;
+	}
+
+	.card-footer {
+		padding-top: 1rem;
+		border-top: 2px solid #f3f4f6;
+	}
+
+	.threat-counter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+		border-radius: 12px;
+	}
+
+	.counter-label {
+		color: #92400e;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+
+	.counter-value {
+		color: #b45309;
+		font-weight: 900;
+		font-size: 1.5rem;
+	}
+
+	.floating-elements {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+	}
+
+	.floating-badge {
+		position: absolute;
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(10px);
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		font-weight: 600;
+		font-size: 0.9rem;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.badge-1 {
+		top: 10%;
+		right: -5%;
+		animation-delay: 0s;
+	}
+
+	.badge-2 {
+		top: 60%;
+		right: -8%;
+		animation-delay: 1s;
+	}
+
+	.badge-3 {
+		bottom: 15%;
+		right: 5%;
+		animation-delay: 2s;
+	}
+
+	@keyframes fadeInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInRight {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-20px);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.wp-security-hero {
+			flex-direction: column;
+			text-align: center;
+			padding: 3rem 1.5rem;
+		}
+
+		.hero-content {
+			max-width: 100%;
+		}
+
+		.hero-title {
+			font-size: 3rem;
+		}
+
+		.hero-stats {
+			justify-content: center;
+		}
+
+		.hero-visual {
+			margin-top: 3rem;
+		}
+
+		.floating-badge {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-description {
+			font-size: 1.1rem;
+		}
+
+		.stat-number {
+			font-size: 2rem;
+		}
+
+		.stat-divider {
+			display: none;
+		}
+	}
+</style>
