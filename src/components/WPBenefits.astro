@@ -1,0 +1,85 @@
+---
+---
+
+<section class="section alt">
+	<div class="section-header">
+		<span class="section-label">Ventajas</span>
+		<h2>¿Por qué WordPress funciona tan bien como CMS?</h2>
+	</div>
+	<div class="benefits">
+		<div class="benefit">
+			<h3>Gestión de contenido intuitiva</h3>
+			<p>Editor visual, bloques y flujo editorial pensado para equipos no técnicos.</p>
+		</div>
+		<div class="benefit">
+			<h3>Escalable y personalizable</h3>
+			<p>Miles de plugins y temas para crecer sin rehacer el sitio desde cero.</p>
+		</div>
+		<div class="benefit">
+			<h3>SEO y rendimiento</h3>
+			<p>Optimización de URLs, metadatos y rendimiento con herramientas especializadas.</p>
+		</div>
+		<div class="benefit">
+			<h3>Comunidad y soporte</h3>
+			<p>Gran ecosistema de recursos, documentación y profesionales disponibles.</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section.alt {
+		background: var(--bg-secondary);
+		border-radius: var(--radius-xl);
+		padding: 4rem 2rem;
+		margin: 0 auto 2rem;
+		max-width: 1200px;
+	}
+
+	.section-label {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary-color);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.4rem;
+		margin: 0.75rem 0 1rem;
+	}
+
+	.benefits {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.75rem;
+	}
+
+	.benefit {
+		background: var(--surface-color);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		border: 1px solid var(--border-color);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.benefit h3 {
+		margin: 0 0 0.75rem;
+		font-size: 1.25rem;
+	}
+
+	@media (max-width: 768px) {
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.benefits {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

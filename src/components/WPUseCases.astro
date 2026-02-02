@@ -1,0 +1,233 @@
+---
+---
+
+<section class="section">
+	<div class="section-header">
+		<span class="section-label">Casos de uso</span>
+		<h2>¿Para qué se usa WordPress como CMS?</h2>
+		<p class="section-subtitle">
+			Desde sitios corporativos hasta tiendas online, WordPress se adapta a múltiples
+			necesidades sin perder flexibilidad.
+		</p>
+	</div>
+
+	<div class="use-grid">
+		<div class="use-card">
+			<div class="use-icon">📰</div>
+			<h3>Blogs y publicaciones</h3>
+			<p>
+				Ideal para medios, revistas y blogs. Su editor facilita la creación de contenido
+				con categorías, etiquetas y flujo editorial.
+			</p>
+			<ul>
+				<li>Gestión de autores</li>
+				<li>Programación de entradas</li>
+				<li>SEO integrado</li>
+			</ul>
+		</div>
+
+		<div class="use-card featured">
+			<div class="badge">Más común</div>
+			<div class="use-icon">🏢</div>
+			<h3>Sitios corporativos</h3>
+			<p>
+				Presenta servicios, equipo y contacto con una imagen profesional. Se integra
+				con formularios y analítica fácilmente.
+			</p>
+			<ul>
+				<li>Landing pages</li>
+				<li>Multiidioma</li>
+				<li>Integraciones CRM</li>
+			</ul>
+		</div>
+
+		<div class="use-card">
+			<div class="use-icon">🛒</div>
+			<h3>Tiendas online</h3>
+			<p>
+				Con WooCommerce se convierte en eCommerce completo: catálogo, pagos, envíos y
+				promociones en una sola plataforma.
+			</p>
+			<ul>
+				<li>Gestión de stock</li>
+				<li>Cupones y ofertas</li>
+				<li>Pasarelas de pago</li>
+			</ul>
+		</div>
+
+		<div class="use-card">
+			<div class="use-icon">📁</div>
+			<h3>Portafolios y CV</h3>
+			<p>
+				Perfecto para creativos y profesionales que desean mostrar proyectos con una
+				presentación visual atractiva.
+			</p>
+			<ul>
+				<li>Galerías y sliders</li>
+				<li>Secciones destacadas</li>
+				<li>Diseños responsivos</li>
+			</ul>
+		</div>
+
+		<div class="use-card">
+			<div class="use-icon">🎓</div>
+			<h3>Academias y cursos</h3>
+			<p>
+				Con plugins LMS, WordPress puede gestionar cursos, lecciones, pagos y
+				certificados en una plataforma propia.
+			</p>
+			<ul>
+				<li>Lecciones en video</li>
+				<li>Seguimiento de progreso</li>
+				<li>Certificación automática</li>
+			</ul>
+		</div>
+
+		<div class="use-card">
+			<div class="use-icon">🧩</div>
+			<h3>Comunidades y membresías</h3>
+			<p>
+				Permite crear áreas privadas, foros y contenido exclusivo por niveles
+				de suscripción.
+			</p>
+			<ul>
+				<li>Contenido restringido</li>
+				<li>Pagos recurrentes</li>
+				<li>Foros y perfiles</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 5rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-label {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary-color);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.4rem;
+		margin: 0.75rem 0 1rem;
+	}
+
+	.section-subtitle {
+		max-width: 680px;
+		margin: 0 auto;
+		font-size: 1.1rem;
+	}
+
+	.use-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+
+	.use-card {
+		background: var(--surface-color);
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius-lg);
+		padding: 2rem;
+		box-shadow: var(--shadow-sm);
+		transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+		position: relative;
+	}
+
+	.use-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--primary-color);
+	}
+
+	.use-card.featured {
+		border-color: var(--primary-color);
+		background: linear-gradient(135deg, var(--surface-color), rgba(99, 102, 241, 0.05));
+	}
+
+	.badge {
+		position: absolute;
+		top: -12px;
+		right: 20px;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		color: white;
+		padding: 0.35rem 0.9rem;
+		border-radius: var(--radius-full);
+		font-size: 0.75rem;
+		font-weight: 700;
+	}
+
+	.use-icon {
+		width: 56px;
+		height: 56px;
+		border-radius: 14px;
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.6rem;
+		margin-bottom: 1.2rem;
+	}
+
+	.use-card h3 {
+		font-size: 1.3rem;
+		margin: 0 0 0.75rem;
+	}
+
+	.use-card p {
+		font-size: 0.98rem;
+		margin: 0 0 1rem;
+	}
+
+	.use-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border-top: 1px solid var(--border-color);
+		padding-top: 1rem;
+	}
+
+	.use-card li {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.9rem;
+		padding: 0.35rem 0;
+		color: var(--text-secondary);
+	}
+
+	.use-card li::before {
+		content: '✓';
+		color: #10b981;
+		font-weight: 700;
+	}
+
+	@media (max-width: 1024px) {
+		.use-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.use-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
