@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WPUsesHero from '../components/WPUsesHero.astro';
+import WPUseCases from '../components/WPUseCases.astro';
+import WPBenefits from '../components/WPBenefits.astro';
+import WPWorkflow from '../components/WPWorkflow.astro';
+import WPCTA from '../components/WPCTA.astro';
+---
+
+<Layout>
+	<main class="wp-cms-page">
+		<WPUsesHero />
+		<WPUseCases />
+		<WPBenefits />
+		<WPWorkflow />
+		<WPCTA />
+	</main>
+</Layout>
+
+<style>
+	.wp-cms-page {
+		background: var(--bg-primary);
+		min-height: 100vh;
+	}
+</style>
