@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrainingHero from '../components/TrainingHero.astro';
+import TrainingCategories from '../components/TrainingCategories.astro';
+import TrainingRealCases from '../components/TrainingRealCases.astro';
+import TrainingMethodologies from '../components/TrainingMethodologies.astro';
+import TrainingTools from '../components/TrainingTools.astro';
+import TrainingCTA from '../components/TrainingCTA.astro';
+---
+
+<Layout title="Ejemplos de Formación Digital | LMS y CMS en Acción">
+	<main class="training-examples-page">
+		<TrainingHero />
+		<TrainingCategories />
+		<TrainingRealCases />
+		<TrainingMethodologies />
+		<TrainingTools />
+		<TrainingCTA />
+	</main>
+</Layout>
+
+<style>
+	.training-examples-page {
+		background: var(--bg-primary);
+		min-height: 100vh;
+	}
+</style>
