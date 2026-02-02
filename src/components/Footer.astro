@@ -1,5 +1,6 @@
 ---
 // Footer component
+const { currentPath } = Astro.props;
 ---
 
 <footer class="footer">
@@ -29,18 +30,18 @@
 			<div class="footer-column">
 				<h3 class="footer-title">Enlaces Rápidos</h3>
 				<ul class="footer-links">
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/que-es-lms">¿Qué es un LMS?</a></li>
-					<li><a href="/que-es-cms">¿Qué es un CMS?</a></li>
-					<li><a href="/seguridad-wordpress">Seguridad WordPress</a></li>
+					<li><a href="/" class={currentPath === '/' ? 'active' : ''}>Inicio</a></li>
+					<li><a href="/que-es-lms" class={currentPath === '/que-es-lms' || currentPath === '/que-es-lms/' ? 'active' : ''}>¿Qué es un LMS?</a></li>
+					<li><a href="/que-es-cms" class={currentPath === '/que-es-cms' || currentPath === '/que-es-cms/' ? 'active' : ''}>¿Qué es un CMS?</a></li>
+					<li><a href="/seguridad-wordpress" class={currentPath === '/seguridad-wordpress' || currentPath === '/seguridad-wordpress/' ? 'active' : ''}>Seguridad WordPress</a></li>
 				</ul>
 			</div>
             
             <!-- Columna 3: Enlaces (Columna 2) -->
 			<div class="footer-column">
-				<h3 class="footer-title"></h3>
+				<h3 class="footer-title">Recursos</h3>
 				<ul class="footer-links">
-                    <li><a href="/usos-wordpress-cms">Usos WordPress CMS</a></li>
+                    <li><a href="/usos-wordpress-cms" class={currentPath === '/usos-wordpress-cms' || currentPath === '/usos-wordpress-cms/' ? 'active' : ''}>Usos WordPress CMS</a></li>
 				</ul>
 			</div>
 
@@ -173,11 +174,24 @@
 		font-size: 0.95rem;
 		transition: all 0.3s ease;
 		display: inline-block;
+		position: relative;
 	}
 
 	.footer-links a:hover {
 		color: var(--primary-light);
 		padding-left: 0.5rem;
+	}
+
+	.footer-links a.active {
+		color: white;
+		font-weight: 600;
+	}
+
+	.footer-links a.active::before {
+		content: '▸';
+		position: absolute;
+		left: -1rem;
+		color: var(--primary-light);
 	}
 
 	.footer-bottom {
