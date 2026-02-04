@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
+
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -16,9 +18,9 @@ import Footer from "../components/Footer.astro"
 		<title>Herramientas Colaborativas - Tu guía de desarrollo web</title>
 	</head>
 	<body>
-		<Navbar />
+		<Navbar currentPath={currentPath} />
 		<slot />
-		<Footer />
+		<Footer currentPath={currentPath} />
 	</body>
 </html>
 
