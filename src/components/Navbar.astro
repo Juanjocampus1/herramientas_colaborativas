@@ -1,5 +1,6 @@
 ---
-// Navbar component - Estilo elegante y profesional
+// Navbar component
+const { currentPath } = Astro.props;
 ---
 
 <nav class="navbar">
@@ -20,14 +21,15 @@
 		</button>
 
 		<ul class="nav-menu" id="navMenu">
-			<li><a href="/" class="nav-link">Inicio</a></li>
-			<li><a href="/que-es-lms" class="nav-link">¿Qué es un LMS?</a></li>
-			<li><a href="/ejemplos-formacion" class="nav-link">Ejemplos de Formación</a></li>
-			<li><a href="/usos-wordpress-cms" class="nav-link">Usos WordPress CMS</a></li>
-			<li><a href="/wordpress-como-cms-caracteristicas" class="nav-link">Características Wordpress CMS</a></li>
-			<li><a href="/seguridad-wordpress" class="nav-link">Seguridad WordPress</a></li>
+			<li><a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>Inicio</a></li>
+			<li><a href="/que-es-lms" class={`nav-link ${currentPath === '/que-es-lms' || currentPath === '/que-es-lms/' ? 'active' : ''}`}>LMS</a></li>
+			<li><a href="/que-es-cms" class={`nav-link ${currentPath === '/que-es-cms' || currentPath === '/que-es-cms/' ? 'active' : ''}`}>CMS</a></li>
+			<li><a href="/usos-wordpress-cms" class={`nav-link ${currentPath === '/usos-wordpress-cms' || currentPath === '/usos-wordpress-cms/' ? 'active' : ''}`}>Usos WP</a></li>
+			<li><a href="/seguridad-wordpress" class={`nav-link ${currentPath === '/seguridad-wordpress' || currentPath === '/seguridad-wordpress/' ? 'active' : ''}`}>Seguridad WP</a></li>
+			<li><a href="/wordpress-como-cms-caracteristicas" class={`nav-link ${currentPath === '/wordpress-como-cms-caracteristicas' || currentPath === '/wordpress-como-cms-caracteristicas/' ? 'active' : ''}`}>Características</a></li>
+			<li><a href="/wordpress-lms" class={`nav-link ${currentPath === '/wordpress-lms' || currentPath === '/wordpress-lms/' ? 'active' : ''}`}>WordPress LMS</a></li>
 			<li><a href="/accesibilidad-wordpress" class="nav-link">Accesibilidad WordPress</a></li>
-			<li><a href="#about" class="nav-link">Acerca de</a></li>
+			<li><a href="/ejemplos-formacion" class={`nav-link ${currentPath === '/ejemplos-formacion' || currentPath === '/ejemplos-formacion/' ? 'active' : ''}`}>Ejemplos de Formación</a></li>
 		</ul>
 	</div>
 </nav>
@@ -115,6 +117,12 @@
 		background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
 	}
 
+	.nav-link.active {
+		color: var(--primary-color);
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+		font-weight: 600;
+	}
+
 	.nav-link::after {
 		content: '';
 		position: absolute;
@@ -128,7 +136,8 @@
 		transition: width var(--transition-base);
 	}
 
-	.nav-link:hover::after {
+	.nav-link:hover::after,
+	.nav-link.active::after {
 		width: 50%;
 	}
 
