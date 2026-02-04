@@ -1,0 +1,328 @@
+---
+---
+
+<section class="comparison-table-section">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-label">Análisis Comparativo</span>
+			<h2>Diferencias <span class="highlight">Fundamentales</span></h2>
+			<p class="section-subtitle">
+				Compara las características principales para entender cuál se adapta mejor a tus necesidades
+			</p>
+		</div>
+
+		<div class="comparison-table">
+			<div class="table-header">
+				<div class="header-cell empty"></div>
+				<div class="header-cell lms">
+					<span class="icon">🎓</span>
+					<span class="title">LMS</span>
+					<span class="subtitle">Learning Management System</span>
+				</div>
+				<div class="header-cell cms">
+					<span class="icon">🌐</span>
+					<span class="title">CMS</span>
+					<span class="subtitle">Content Management System</span>
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">🎯</span>
+					<span class="label-text">Propósito Principal</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Gestión y entrega de contenido educativo y formación
+				</div>
+				<div class="row-cell cms-cell">
+					Creación y gestión de contenido web general
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">👥</span>
+					<span class="label-text">Usuarios Objetivo</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Estudiantes, profesores, administradores educativos
+				</div>
+				<div class="row-cell cms-cell">
+					Editores de contenido, marketers, desarrolladores web
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">⚙️</span>
+					<span class="label-text">Funcionalidades Clave</span>
+				</div>
+				<div class="row-cell lms-cell">
+					<ul>
+						<li>Gestión de cursos</li>
+						<li>Seguimiento de progreso</li>
+						<li>Evaluaciones y certificados</li>
+						<li>Foros y colaboración</li>
+					</ul>
+				</div>
+				<div class="row-cell cms-cell">
+					<ul>
+						<li>Editor de contenido</li>
+						<li>Gestión de medios</li>
+						<li>SEO y marketing</li>
+						<li>Temas y plugins</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">📊</span>
+					<span class="label-text">Análisis y Reportes</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Enfocado en métricas de aprendizaje, calificaciones y progreso
+				</div>
+				<div class="row-cell cms-cell">
+					Enfocado en tráfico web, conversiones y engagement
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">💰</span>
+					<span class="label-text">Modelo de Negocio</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Educación, formación corporativa, certificaciones
+				</div>
+				<div class="row-cell cms-cell">
+					Blogs, e-commerce, sitios corporativos, portales
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">🔧</span>
+					<span class="label-text">Complejidad Técnica</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Media-Alta (requiere configuración pedagógica)
+				</div>
+				<div class="row-cell cms-cell">
+					Baja-Media (más accesible para principiantes)
+				</div>
+			</div>
+
+			<div class="table-row">
+				<div class="row-label">
+					<span class="label-icon">💵</span>
+					<span class="label-text">Costo Típico</span>
+				</div>
+				<div class="row-cell lms-cell">
+					Variable, desde gratuito (Moodle) hasta $$$$ (enterprise)
+				</div>
+				<div class="row-cell cms-cell">
+					Generalmente más económico, muchas opciones gratuitas
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.comparison-table-section {
+		padding: 6rem 2rem;
+		background: var(--bg-secondary);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-label {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		margin: 0 0 1rem 0;
+		letter-spacing: -0.5px;
+	}
+
+	.highlight {
+		color: var(--primary-color);
+	}
+
+	.section-subtitle {
+		font-size: 1.15rem;
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.comparison-table {
+		background: var(--surface-color);
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+		border: 1px solid var(--border-color);
+	}
+
+	.table-header {
+		display: grid;
+		grid-template-columns: 250px 1fr 1fr;
+		gap: 1px;
+		background: var(--border-color);
+	}
+
+	.header-cell {
+		background: var(--surface-color);
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 0.5rem;
+	}
+
+	.header-cell.empty {
+		background: var(--bg-secondary);
+	}
+
+	.header-cell.lms {
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.05));
+	}
+
+	.header-cell.cms {
+		background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(99, 102, 241, 0.05));
+	}
+
+	.header-cell .icon {
+		font-size: 2.5rem;
+	}
+
+	.header-cell .title {
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: var(--text-primary);
+	}
+
+	.header-cell .subtitle {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+	}
+
+	.table-row {
+		display: grid;
+		grid-template-columns: 250px 1fr 1fr;
+		gap: 1px;
+		background: var(--border-color);
+	}
+
+	.row-label {
+		background: var(--bg-secondary);
+		padding: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	.label-icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.label-text {
+		font-size: 0.95rem;
+	}
+
+	.row-cell {
+		background: var(--surface-color);
+		padding: 1.5rem;
+		color: var(--text-secondary);
+		line-height: 1.7;
+		font-size: 0.95rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.row-cell ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.row-cell li {
+		padding: 0.4rem 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.row-cell li::before {
+		content: '✓';
+		color: #10b981;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+
+	.lms-cell {
+		border-left: 3px solid var(--primary-color);
+	}
+
+	.cms-cell {
+		border-left: 3px solid var(--accent-color);
+	}
+
+	@media (max-width: 968px) {
+		.table-header,
+		.table-row {
+			grid-template-columns: 1fr;
+		}
+
+		.header-cell.empty {
+			display: none;
+		}
+
+		.row-label {
+			background: var(--surface-color);
+			border-bottom: 2px solid var(--border-color);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.comparison-table-section {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.header-cell,
+		.row-cell,
+		.row-label {
+			padding: 1.25rem;
+		}
+	}
+</style>
