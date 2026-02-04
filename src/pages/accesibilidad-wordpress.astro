@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WPAccessibilityHero from '../components/WPAccessibilityHero.astro';
+import WPAccessibilityPrinciples from '../components/WPAccessibilityPrinciples.astro';
+import WPAccessibilityChecklist from '../components/WPAccessibilityChecklist.astro';
+import WPAccessibilityTools from '../components/WPAccessibilityTools.astro';
+---
+
+<Layout>
+    <main class="wp-accessibility-page">
+        <WPAccessibilityHero />
+        <WPAccessibilityPrinciples />
+        <WPAccessibilityChecklist />
+        <WPAccessibilityTools />
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Accesibilidad = más usuarios, menos dramas</h2>
+                <p>
+                    Una web accesible suele ser más clara, más usable y más profesional.
+                    Y además, reduce el “no puedo hacer clic en nada” que aparece siempre cuando menos te apetece.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/" class="btn btn-primary">Volver al Inicio</a>
+                    <a href="/seguridad-wordpress" class="btn btn-secondary">Ver Seguridad</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .wp-accessibility-page {
+        background: var(--bg-primary);
+        min-height: 100vh;
+    }
+
+    .cta-section {
+        padding: 6rem 2rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        opacity: 0.95;
+        margin: 0 0 2rem 0;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 0.5px;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .btn:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+        color: #1e293b;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .cta-content h2 {
+            font-size: 1.75rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+        }
+    }
+</style>
