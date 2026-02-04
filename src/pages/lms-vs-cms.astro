@@ -1,0 +1,487 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComparisonHero from '../components/ComparisonHero.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import ComparisonUseCases from '../components/ComparisonUseCases.astro';
+---
+
+<Layout>
+	<main class="comparison-page">
+		<ComparisonHero />
+		<ComparisonTable />
+		<ComparisonUseCases />
+
+		<!-- Decision Guide Section -->
+		<section class="decision-guide">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">Guía de Decisión</span>
+					<h2>¿Todavía no estás seguro?</h2>
+					<p class="section-subtitle">
+						Responde estas preguntas para identificar la mejor opción
+					</p>
+				</div>
+
+				<div class="decision-cards">
+					<div class="decision-card">
+						<div class="question-number">1</div>
+						<h3>¿Cuál es tu objetivo principal?</h3>
+						<div class="options">
+							<div class="option lms-option">
+								<span class="option-icon">🎓</span>
+								<span class="option-text">Educar y formar personas</span>
+								<span class="option-badge">→ LMS</span>
+							</div>
+							<div class="option cms-option">
+								<span class="option-icon">🌐</span>
+								<span class="option-text">Publicar contenido web</span>
+								<span class="option-badge">→ CMS</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="decision-card">
+						<div class="question-number">2</div>
+						<h3>¿Necesitas evaluar a los usuarios?</h3>
+						<div class="options">
+							<div class="option lms-option">
+								<span class="option-icon">✅</span>
+								<span class="option-text">Sí, con exámenes y certificados</span>
+								<span class="option-badge">→ LMS</span>
+							</div>
+							<div class="option cms-option">
+								<span class="option-icon">📝</span>
+								<span class="option-text">No, solo compartir información</span>
+								<span class="option-badge">→ CMS</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="decision-card">
+						<div class="question-number">3</div>
+						<h3>¿Qué tipo de contenido vas a crear?</h3>
+						<div class="options">
+							<div class="option lms-option">
+								<span class="option-icon">📚</span>
+								<span class="option-text">Cursos estructurados y lecciones</span>
+								<span class="option-badge">→ LMS</span>
+							</div>
+							<div class="option cms-option">
+								<span class="option-icon">📄</span>
+								<span class="option-text">Artículos, páginas y multimedia</span>
+								<span class="option-badge">→ CMS</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="decision-card">
+						<div class="question-number">4</div>
+						<h3>¿Requieres seguimiento de progreso?</h3>
+						<div class="options">
+							<div class="option lms-option">
+								<span class="option-icon">📊</span>
+								<span class="option-text">Sí, monitorear avance de estudiantes</span>
+								<span class="option-badge">→ LMS</span>
+							</div>
+							<div class="option cms-option">
+								<span class="option-icon">📈</span>
+								<span class="option-text">Solo analytics de tráfico web</span>
+								<span class="option-badge">→ CMS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Key Takeaways -->
+		<section class="key-takeaways">
+			<div class="container">
+				<h2>Conclusiones Clave</h2>
+				<div class="takeaways-grid">
+					<div class="takeaway-card">
+						<span class="takeaway-icon">💡</span>
+						<h3>Propósito Diferente</h3>
+						<p>
+							Un LMS está diseñado específicamente para educación y formación, 
+							mientras que un CMS es para gestionar contenido web general.
+						</p>
+					</div>
+
+					<div class="takeaway-card">
+						<span class="takeaway-icon">🎯</span>
+						<h3>Funcionalidades Únicas</h3>
+						<p>
+							Los LMS ofrecen evaluaciones, certificados y seguimiento de progreso. 
+							Los CMS destacan en SEO, diseño flexible y gestión de medios.
+						</p>
+					</div>
+
+					<div class="takeaway-card">
+						<span class="takeaway-icon">🔄</span>
+						<h3>Soluciones Híbridas</h3>
+						<p>
+							Plataformas como WordPress pueden funcionar como ambos sistemas, 
+							ofreciendo flexibilidad para proyectos complejos.
+						</p>
+					</div>
+
+					<div class="takeaway-card">
+						<span class="takeaway-icon">💰</span>
+						<h3>Considera el Costo</h3>
+						<p>
+							Los CMS suelen ser más económicos y accesibles. Los LMS pueden 
+							requerir mayor inversión pero ofrecen ROI en formación.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<div class="cta-content">
+				<h2>¿Listo para elegir tu plataforma?</h2>
+				<p>
+					Ahora que conoces las diferencias, explora más sobre cada sistema 
+					para tomar la mejor decisión para tu proyecto
+				</p>
+				<div class="cta-buttons">
+					<a href="/que-es-lms" class="btn btn-lms">
+						<span class="btn-icon">🎓</span>
+						<span>Explorar LMS</span>
+					</a>
+					<a href="/que-es-cms" class="btn btn-cms">
+						<span class="btn-icon">🌐</span>
+						<span>Explorar CMS</span>
+					</a>
+					<a href="/" class="btn btn-home">
+						<span>Volver al Inicio</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.comparison-page {
+		min-height: 100vh;
+		background: var(--bg-primary);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Decision Guide Section */
+	.decision-guide {
+		padding: 6rem 2rem;
+		background: var(--surface-color);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-label {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		margin: 0 0 1rem 0;
+		letter-spacing: -0.5px;
+	}
+
+	.section-subtitle {
+		font-size: 1.15rem;
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.decision-cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.decision-card {
+		background: var(--bg-primary);
+		border: 2px solid var(--border-color);
+		border-radius: var(--radius-xl);
+		padding: 2rem;
+		position: relative;
+		transition: all var(--transition-base);
+	}
+
+	.decision-card:hover {
+		border-color: var(--primary-color);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.question-number {
+		position: absolute;
+		top: -15px;
+		left: 2rem;
+		width: 40px;
+		height: 40px;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 800;
+		font-size: 1.1rem;
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+	}
+
+	.decision-card h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0 0 1.5rem 0;
+	}
+
+	.options {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.option {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.25rem;
+		background: var(--surface-color);
+		border: 2px solid var(--border-color);
+		border-radius: var(--radius-lg);
+		transition: all var(--transition-base);
+		cursor: pointer;
+	}
+
+	.option:hover {
+		transform: translateX(5px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.lms-option:hover {
+		border-color: var(--primary-color);
+		background: rgba(99, 102, 241, 0.05);
+	}
+
+	.cms-option:hover {
+		border-color: var(--accent-color);
+		background: rgba(6, 182, 212, 0.05);
+	}
+
+	.option-icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.option-text {
+		flex: 1;
+		color: var(--text-primary);
+		font-weight: 500;
+	}
+
+	.option-badge {
+		background: var(--bg-primary);
+		padding: 0.4rem 0.8rem;
+		border-radius: var(--radius-full);
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--primary-color);
+	}
+
+	/* Key Takeaways */
+	.key-takeaways {
+		padding: 6rem 2rem;
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(6, 182, 212, 0.05));
+	}
+
+	.key-takeaways h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		margin: 0 0 3rem 0;
+	}
+
+	.takeaways-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.takeaway-card {
+		background: var(--surface-color);
+		padding: 2.5rem;
+		border-radius: var(--radius-xl);
+		border: 1px solid var(--border-color);
+		text-align: center;
+		transition: all var(--transition-base);
+	}
+
+	.takeaway-card:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-xl);
+		border-color: var(--primary-color);
+	}
+
+	.takeaway-icon {
+		font-size: 3rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.takeaway-card h3 {
+		font-size: 1.35rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin: 0 0 1rem 0;
+	}
+
+	.takeaway-card p {
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	/* CTA Section */
+	.cta-section {
+		padding: 6rem 2rem;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		text-align: center;
+	}
+
+	.cta-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: white;
+		margin: 0 0 1rem 0;
+	}
+
+	.cta-content p {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.95);
+		line-height: 1.7;
+		margin: 0 0 2.5rem 0;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--radius-full);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all var(--transition-base);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		border: 2px solid transparent;
+	}
+
+	.btn-lms {
+		background: white;
+		color: var(--primary-color);
+	}
+
+	.btn-lms:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-cms {
+		background: white;
+		color: var(--accent-color);
+	}
+
+	.btn-cms:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-home {
+		background: transparent;
+		color: white;
+		border-color: white;
+	}
+
+	.btn-home:hover {
+		background: white;
+		color: var(--primary-color);
+		transform: translateY(-3px);
+	}
+
+	.btn-icon {
+		font-size: 1.25rem;
+	}
+
+	/* Responsive */
+	@media (max-width: 968px) {
+		.decision-cards,
+		.takeaways-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.decision-guide,
+		.key-takeaways,
+		.cta-section {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header h2,
+		.key-takeaways h2,
+		.cta-content h2 {
+			font-size: 2rem;
+		}
+
+		.decision-card {
+			padding: 1.5rem;
+		}
+
+		.takeaway-card {
+			padding: 2rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 300px;
+			justify-content: center;
+		}
+	}
+</style>

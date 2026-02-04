@@ -1,0 +1,138 @@
+<section class="access-hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-icon">♿</span>
+            <span class="badge-text">Accesibilidad en WordPress</span>
+        </div>
+
+        <h1 class="hero-title">
+            Haz tu web <span class="gradient-text">usable para todos</span>
+        </h1>
+
+        <p class="hero-description">
+            La accesibilidad (a11y) significa que cualquier persona puede navegar, entender y utilizar tu web:
+            quien usa teclado, lector de pantalla o tiene baja visión. En WordPress depende del tema, del contenido
+            y de algunos detalles clave.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">Alt</span>
+                <span class="stat-label">Imágenes describibles</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">TAB</span>
+                <span class="stat-label">Navegación por teclado</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">AA</span>
+                <span class="stat-label">Contraste y legibilidad</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .access-hero {
+        background: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #8b5cf6 100%);
+        padding: 6rem 2rem;
+        color: white;
+        text-align: center;
+        border-radius: 24px;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        margin-bottom: 2rem;
+    }
+
+    .badge-icon {
+        font-size: 1.2rem;
+    }
+
+    .badge-text {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+        color: white;
+    }
+
+    .gradient-text {
+        background: linear-gradient(135deg, #fff 0%, #e0f7ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        max-width: 760px;
+        margin: 0 auto 3rem auto;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        min-width: 160px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: white;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .stat-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.35);
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+        }
+
+        .stat-divider {
+            display: none;
+        }
+    }
+</style>
