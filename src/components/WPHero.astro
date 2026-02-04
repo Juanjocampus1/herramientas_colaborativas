@@ -1,0 +1,102 @@
+---
+interface Props {
+  // Puedes añadir props si quieres personalizar el hero
+}
+---
+
+<section class="wp-hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-icon">🖥️</span>
+      <span class="badge-text">WordPress LMS</span>
+    </div>
+    <h1 class="hero-title">¿Qué diferencia a <span class="gradient-text">WordPress como LMS</span> de un CMS tradicional?</h1>
+    <p class="hero-description">
+      WordPress como LMS (Learning Management System) transforma la gestión de contenidos en una potente plataforma educativa.
+      Crea, organiza y distribuye cursos online con herramientas especializadas que van mucho más allá de un CMS estándar.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">+50K</span>
+        <span class="stat-label">Plugins LMS disponibles</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">+10M</span>
+        <span class="stat-label">Usuarios activos de WordPress LMS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Soporte y comunidad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.wp-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 6rem 2rem;
+  color: white;
+  text-align: center;
+  border-radius: 24px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.badge-icon { font-size: 1.2rem; }
+.badge-text { font-weight: 600; }
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #f0e5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.stat-item { display: flex; flex-direction: column; gap: 0.25rem; }
+.stat-number { font-size: 2rem; font-weight: 800; }
+.stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.9); }
+
+.stat-divider {
+  width: 1px; height: 40px;
+  background: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .hero-description { font-size: 1rem; }
+  .hero-stats { flex-direction: column; gap: 1rem; }
+  .stat-divider { display: none; }
+}
+</style>

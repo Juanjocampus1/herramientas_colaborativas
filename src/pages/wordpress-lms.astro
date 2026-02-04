@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WPHero from '../components/WPHero.astro';
+import WPFeatures from '../components/WPFeatures.astro';
+import WPComparison from '../components/WPComparison.astro';
+---
+
+<Layout>
+  <main class="wp-lms-page">
+    <WPHero />
+    <WPFeatures />
+    <WPComparison />
+  </main>
+</Layout>
+
+<style>
+.wp-lms-page {
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+</style>

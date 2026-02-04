@@ -1,0 +1,100 @@
+---
+// Componente de Call-to-Action para LMS
+---
+
+<section class="cta-section">
+	<div class="cta-content">
+		<h2>¿Listo para implementar un LMS?</h2>
+		<p>
+			Un LMS bien implementado puede transformar completamente la forma en que
+			tu organización aborda la formación y el desarrollo de talento.
+		</p>
+		<div class="cta-buttons">
+			<a href="/" class="btn btn-primary">Volver al Inicio</a>
+			<a href="/seguridad-wordpress" class="btn btn-secondary">Ver Seguridad WordPress</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.cta-section {
+		padding: 6rem 2rem;
+		background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+	}
+
+	.cta-content {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin: 0 0 1rem 0;
+	}
+
+	.cta-content p {
+		font-size: 1.2rem;
+		line-height: 1.8;
+		opacity: 0.95;
+		margin: 0 0 2rem 0;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: white;
+		color: var(--primary-color);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-secondary:hover {
+		background: white;
+		color: var(--primary-color);
+		transform: translateY(-3px);
+	}
+
+	@media (max-width: 768px) {
+		.cta-content h2 {
+			font-size: 1.75rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 300px;
+			text-align: center;
+		}
+	}
+</style>
